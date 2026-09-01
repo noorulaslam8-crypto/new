@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#eadbc2">
+<title>Engagement Invitation</title>
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#5d3c16;color:#47382b;font-family:Georgia,'Times New Roman',serif;overflow-x:hidden}.site{max-width:720px;margin:auto;background:#f8f0e1;box-shadow:0 0 50px #0008;overflow:hidden}.screen{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;padding:40px 24px;overflow:hidden;background:radial-gradient(circle at 50% 35%,#fffdf8 0,#f8f0e1 55%,#eadbc2 100%)}.screen:before{content:'';position:absolute;inset:13px;border:1px solid #b99459;z-index:1}.screen:after{content:'';position:absolute;inset:20px;border:1px solid #d9c39a;z-index:1}.inside{position:relative;z-index:5;width:min(100%,560px);text-align:center}.eyebrow{font-family:Arial,sans-serif;font-size:10px;letter-spacing:4px;text-transform:uppercase;color:#9a743d}.script{font-family:'Brush Script MT','Segoe Script',cursive;font-size:58px;font-weight:400;color:#98703a;line-height:1.05}.names{font-size:51px;font-weight:400;line-height:.92;color:#453528;margin:10px 0}.amp{font-family:'Brush Script MT','Segoe Script',cursive;font-size:42px;color:#b58b4e;margin:4px}.goldline{height:1px;width:90px;background:#b9955c;margin:22px auto}.date{font-size:24px;letter-spacing:4px}.small{font-family:Arial,sans-serif;font-size:10px;letter-spacing:2px;color:#806c55;line-height:1.8}.scroll{margin-top:65px;font-family:Arial,sans-serif;font-size:9px;letter-spacing:3px;color:#8c714d;animation:pulse 2s infinite}@keyframes pulse{50%{opacity:.3;transform:translateY(5px)}}
+/* Floral artwork */.floral{position:absolute;width:205px;height:205px;z-index:2;opacity:.95}.floral.tl{left:-42px;top:-28px}.floral.br{right:-42px;bottom:-28px;transform:rotate(180deg)}.floral svg{width:100%;height:100%}.stem{fill:none;stroke:#8e774c;stroke-width:2}.leaf{fill:#788665}.rose{fill:#c99495}.rose2{fill:#dfb5ad}
+/* cinematic opening */#opening{position:fixed;inset:0;z-index:100;background:#eadbc2;display:flex;pointer-events:none;animation:hideOpening .8s 3.1s forwards}.curtain{width:50%;height:100%;background:linear-gradient(90deg,#b2874d,#f2e5cc 50%,#b78d53);border:1px solid #9c733c;box-shadow:inset 0 0 70px #5c3a1455}.curtain.left{transform-origin:left;animation:openLeft 2.5s .45s cubic-bezier(.75,0,.15,1) forwards}.curtain.right{transform-origin:right;animation:openRight 2.5s .45s cubic-bezier(.75,0,.15,1) forwards}@keyframes openLeft{to{transform:perspective(1000px) rotateY(-108deg)}}@keyframes openRight{to{transform:perspective(1000px) rotateY(108deg)}}@keyframes hideOpening{to{opacity:0;visibility:hidden}}
+/* petals */#petals{position:fixed;inset:0;z-index:80;pointer-events:none;overflow:hidden}.petal{position:absolute;top:-25px;width:9px;height:14px;border-radius:70% 30% 70% 30%;background:linear-gradient(135deg,#d9a0a0,#efd2c9);opacity:.75;animation:drop linear infinite}@keyframes drop{to{transform:translate(var(--drift),110vh) rotate(650deg)}}
+/* reveal */.reveal{opacity:0;transform:translateY(45px) scale(.98);transition:1.1s ease}.reveal.show{opacity:1;transform:none}.card{width:100%;background:#fffaf2e8;border:1px solid #c6a66f;padding:46px 26px;box-shadow:0 20px 50px #68471918;position:relative}.card:before{content:'';position:absolute;inset:8px;border:1px solid #dfcda9;pointer-events:none}.card>*{position:relative}
+/* photo section */.photo-wrap{position:relative;margin:25px auto;width:min(100%,390px);padding:10px;background:#f9f0df;border:1px solid #b99861;box-shadow:0 20px 40px #49301c25;transform:rotate(-1deg)}.photo-wrap:after{content:'';position:absolute;inset:18px;border:1px solid #ffffff99;pointer-events:none}.photo{display:block;width:100%;height:460px;object-fit:cover;background:linear-gradient(135deg,#d9c6a5,#f7eee0)}.photo-note{font-family:Arial,sans-serif;font-size:9px;letter-spacing:2px;margin-top:12px;color:#92784f}.memory-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:25px}.memory{padding:6px;background:#fff;border:1px solid #c9ad7b;box-shadow:0 8px 20px #49301c18}.memory img{width:100%;height:190px;object-fit:cover;display:block;background:#e8dac4}.memory:nth-child(2){transform:translateY(16px) rotate(1deg)}.memory:nth-child(1){transform:rotate(-1deg)}
+.info{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}.box{padding:18px 7px;border-top:1px solid #d2b98c;border-bottom:1px solid #d2b98c}.box b{display:block;font-size:22px;margin:7px 0}.address{margin-top:16px;padding:18px;border:1px solid #d2b98c}.btn{display:inline-block;margin-top:25px;padding:13px 23px;border:1px solid #9f7842;color:#664a2a;text-decoration:none;font-family:Arial,sans-serif;font-size:10px;letter-spacing:2px;background:#f4e7d2}.btn:active{transform:scale(.98)}.timeline{text-align:left;margin-top:24px}.event{display:grid;grid-template-columns:82px 1fr;gap:12px;margin:24px 0}.time{font-size:18px;color:#99733e}.event h3{margin:0;font-size:21px;font-weight:400}.event p{margin:6px 0;font-family:Arial,sans-serif;font-size:11px;line-height:1.65;color:#776653}
+@media(max-width:430px){.names{font-size:43px}.script{font-size:49px}.card{padding:42px 21px}.photo{height:420px}.memory img{height:165px}}
+</style>
+</head>
+<body>
+<div id="opening"><div class="curtain left"></div><div class="curtain right"></div></div>
+<div id="petals"></div>
+<main class="site">
+
+<!-- COVER -->
+<section class="screen">
+<div class="floral tl"><svg viewBox="0 0 220 220"><path class="stem" d="M8 198C45 151 63 91 145 26"/><path class="stem" d="M49 145C28 120 19 101 10 77M73 112C105 99 124 78 132 55"/><ellipse class="leaf" cx="31" cy="112" rx="7" ry="21" transform="rotate(-34 31 112)"/><ellipse class="leaf" cx="58" cy="137" rx="7" ry="22" transform="rotate(55 58 137)"/><ellipse class="leaf" cx="101" cy="93" rx="7" ry="22" transform="rotate(66 101 93)"/><ellipse class="rose" cx="18" cy="71" rx="11" ry="24" transform="rotate(-34 18 71)"/><ellipse class="rose2" cx="32" cy="66" rx="11" ry="24" transform="rotate(30 32 66)"/><ellipse class="rose" cx="23" cy="84" rx="11" ry="24" transform="rotate(90 23 84)"/></svg></div>
+<div class="floral br"><svg viewBox="0 0 220 220"><path class="stem" d="M8 198C45 151 63 91 145 26"/><path class="stem" d="M49 145C28 120 19 101 10 77M73 112C105 99 124 78 132 55"/><ellipse class="leaf" cx="31" cy="112" rx="7" ry="21" transform="rotate(-34 31 112)"/><ellipse class="leaf" cx="58" cy="137" rx="7" ry="22" transform="rotate(55 58 137)"/><ellipse class="leaf" cx="101" cy="93" rx="7" ry="22" transform="rotate(66 101 93)"/><ellipse class="rose" cx="18" cy="71" rx="11" ry="24" transform="rotate(-34 18 71)"/><ellipse class="rose2" cx="32" cy="66" rx="11" ry="24" transform="rotate(30 32 66)"/><ellipse class="rose" cx="23" cy="84" rx="11" ry="24" transform="rotate(90 23 84)"/></svg></div>
+<div class="inside">
+<div class="eyebrow">Together with their families</div>
+<div class="script">The Beginning</div><div class="goldline"></div>
+<div class="names">YOUR NAME</div><div class="amp">&amp;</div><div class="names">PARTNER NAME</div>
+<div class="goldline"></div><div class="date">20 . 12 . 2026</div><div class="small">ENGAGEMENT CEREMONY</div>
+<div class="scroll">SCROLL TO DISCOVER</div>
+</div>
+</section>
+
+<!-- STORY -->
+<section class="screen"><div class="inside card reveal">
+<div class="eyebrow">A beautiful new chapter</div><div class="script">Our Story</div><div class="goldline"></div>
+<p style="font-size:21px;line-height:1.65;font-style:italic">Some stories are written by chance. Ours was written by two hearts choosing each other.</p>
+<div class="photo-wrap"><img class="photo" src="photo1.jpg" alt="Couple photo"><div class="photo-note">A MOMENT TO REMEMBER</div></div>
+<div class="small">Replace <b>photo1.jpg</b> with your own photo in the same SPCK folder.</div>
+</div></section>
+
+<!-- MEMORIES -->
+<section class="screen"><div class="inside card reveal">
+<div class="eyebrow">Our memories</div><div class="script">Moments of Us</div><div class="goldline"></div>
+<div class="memory-grid"><div class="memory"><img src="photo2.jpg" alt="Memory one"></div><div class="memory"><img src="photo3.jpg" alt="Memory two"></div></div>
+<div class="small" style="margin-top:30px">Add your photos as <b>photo2.jpg</b> and <b>photo3.jpg</b> beside index.html.</div>
+</div></section>
+
+<!-- DATE & VENUE -->
+<section class="screen"><div class="inside card reveal">
+<div class="eyebrow">Save the date</div><div class="script">The Celebration</div><div class="goldline"></div>
+<div class="info"><div class="box"><span class="eyebrow">DATE</span><b>Sunday</b><span class="small">20 December 2026</span></div><div class="box"><span class="eyebrow">TIME</span><b>7:00 PM</b><span class="small">Arrival 6:30 PM</span></div></div>
+<div class="address"><span class="eyebrow">VENUE</span><b style="display:block;font-size:22px;margin:8px">YOUR VENUE NAME</b><span class="small">Your Venue Address, Kuwait</span></div>
+<a class="btn" href="https://www.google.com/maps/search/?api=1&query=Kuwait" target="_blank">VIEW LOCATION</a>
+</div></section>
+
+<!-- PROGRAM -->
+<section class="screen"><div class="inside card reveal">
+<div class="eyebrow">An evening to remember</div><div class="script">The Celebration</div><div class="goldline"></div>
+<div class="timeline"><div class="event"><div class="time">6:30 PM</div><div><h3>Guest Arrival</h3><p>Welcome, greetings and a little time to settle in.</p></div></div><div class="event"><div class="time">7:00 PM</div><div><h3>Engagement Ceremony</h3><p>The special moment as two families come together.</p></div></div><div class="event"><div class="time">8:00 PM</div><div><h3>Dinner &amp; Celebration</h3><p>Good food, laughter, photographs and beautiful memories.</p></div></div></div>
+</div></section>
+
+<!-- END -->
+<section class="screen"><div class="inside card reveal">
+<div class="script">With Love</div><div class="goldline"></div>
+<div class="names" style="font-size:43px">YOUR NAME<br><span class="amp">&amp;</span><br>PARTNER NAME</div>
+<p style="font-size:21px;line-height:1.55;font-style:italic">Your presence is the most precious gift as we begin this beautiful journey.</p>
+<div class="goldline"></div><div class="eyebrow">We can't wait to celebrate with you</div>
+<a class="btn" href="https://wa.me/?text=Congratulations%20on%20your%20engagement!" target="_blank">CONFIRM ATTENDANCE</a>
+</div></section>
+</main>
+
+<script>
+(function(){
+var holder=document.getElementById('petals');
+for(var i=0;i<30;i++){var p=document.createElement('span');p.className='petal';p.style.left=(Math.random()*100)+'%';p.style.animationDuration=(7+Math.random()*8)+'s';p.style.animationDelay=(-Math.random()*12)+'s';p.style.setProperty('--drift',(Math.random()*180-90)+'px');holder.appendChild(p)}
+var els=document.querySelectorAll('.reveal');
+function show(){for(var i=0;i<els.length;i++){var r=els[i].getBoundingClientRect();if(r.top<window.innerHeight*.88&&r.bottom>0)els[i].classList.add('show')}}
+window.addEventListener('scroll',show);window.addEventListener('load',function(){setTimeout(show,800)});show();
+})();
+</script>
+</body>
+</html>
